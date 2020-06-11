@@ -6,7 +6,6 @@ def longestpath(g,s,c):
     if len(li)>0:
         return max(li)
     return c
-#g={1:[2,3],2:[4,5],3:[6],4:[7]}
 gi={}
 li=[]
 n=int(input('Enter the no of vertices '))
@@ -33,8 +32,6 @@ else:
                     gi[i].append(j)
                 else:
                     gi[i]=[j]
-#print(gi)           
 for i in gi.keys():
     li.append(longestpath(gi,i,1))
-#print(li)
 print(max(li))
